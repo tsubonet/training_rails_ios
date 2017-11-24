@@ -17,7 +17,7 @@ class TweetsViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Navigation Barに新規投稿ボタンを追加
-    let newTweetButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: Selector(("didTouchNewTweetBarButton:")))
+    let newTweetButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTouchNewTweetBarButton(_:)))
     navigationItem.rightBarButtonItem = newTweetButton
   }
 
@@ -26,10 +26,8 @@ class TweetsViewController: UITableViewController {
   }
   
   // 新規投稿ボタンが押された時にフォームを表示
-  func didTouchNewTweetBarButton(sender: UIBarButtonItem) {
-    let tweetCreateForm = TweetCreateFormController()
-    let navigationController = UINavigationController(rootViewController: tweetCreateForm)
-    present(navigationController, animated: true, completion: nil)
+  @objc func didTouchNewTweetBarButton(_ sender: UIBarButtonItem) {
+    performSegue(withIdentifier: "showCreate", sender: nil)
   }
   
   // MARK: - Table view data source
@@ -62,8 +60,6 @@ class TweetsViewController: UITableViewController {
         let tweet = tweets[indexPath.row]
         let controller = segue.destination as! TweetDetailViewController
         controller.tweet = tweet
-        //controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-        //controller.navigationItem.leftItemsSupplementBackButton = true
       }
     }
   }

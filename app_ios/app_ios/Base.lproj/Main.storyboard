@@ -10,7 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--テスト！-->
+        <!--Tweet Create Form Controller-->
+        <scene sceneID="Tau-Sy-niZ">
+            <objects>
+                <viewController id="kNm-Qq-caq" customClass="TweetCreateFormController" customModule="app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZm-oQ-bRK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PXH-0b-mlY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ra-Yj-3hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="-582"/>
+        </scene>
+        <!--Tweets View Controller-->
         <scene sceneID="tIs-q0-URA">
             <objects>
                 <tableViewController id="Zf9-u2-Yj0" customClass="TweetsViewController" customModule="app_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,9 +48,10 @@
                             <outlet property="delegate" destination="Zf9-u2-Yj0" id="AxC-ut-97R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="テスト！" id="ogT-ac-dDM"/>
+                    <navigationItem key="navigationItem" id="ogT-ac-dDM"/>
                     <connections>
                         <segue destination="21m-lW-dma" kind="show" identifier="showDetail" id="gU5-Sa-Jro"/>
+                        <segue destination="kNm-Qq-caq" kind="show" identifier="showCreate" id="yes-a8-sz8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZk-Hi-ZJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -51,14 +67,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D2-5a-5NJ">
-                                <rect key="frame" x="34" y="107" width="29" height="21"/>
+                                <rect key="frame" x="34" y="107" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5X-qP-7ER">
-                                <rect key="frame" x="34" y="167" width="39" height="26"/>
+                                <rect key="frame" x="34" y="167" width="115" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
