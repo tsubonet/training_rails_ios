@@ -1,0 +1,15 @@
+current directory: /usr/share/nginx/html/app_rails/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+/home/vagrant/.rbenv/versions/2.4.2/bin/ruby -r ./siteconf20171123-30822-1ky5ebo.rb extconf.rb
+creating Makefile
+
+current directory: /usr/share/nginx/html/app_rails/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /usr/share/nginx/html/app_rails/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /usr/share/nginx/html/app_rails/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20171123-30822-15eelmn/bindex
