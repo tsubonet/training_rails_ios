@@ -9,6 +9,13 @@
 import UIKit
 class TweetCreateFormController: UIViewController {
 
+  @IBOutlet weak var titleText: UITextField!
+  @IBOutlet weak var bodyText: UITextField!
+    
+  @IBAction func createButton(_ sender: UIButton) {
+    navigationController?.popToRootViewController(animated: true)
+  }
+    
   override func viewDidLoad() {
     super.viewDidLoad()
   }

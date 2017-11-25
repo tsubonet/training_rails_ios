@@ -36,6 +36,9 @@
                                 <rect key="frame" x="157" y="332" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="createButton:" destination="kNm-Qq-caq" eventType="touchUpInside" id="kji-h7-k6k"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVs-Pi-47U">
                                 <rect key="frame" x="24" y="142" width="29" height="21"/>
@@ -55,6 +58,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PXH-0b-mlY"/>
                     </view>
+                    <connections>
+                        <outlet property="bodyText" destination="JAy-qH-nMk" id="u4v-iL-bB9"/>
+                        <outlet property="titleText" destination="wEq-QD-Xae" id="AxP-Oe-oZx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ra-Yj-3hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,11 +76,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="mb2-hf-Bfc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="mb2-hf-Bfc">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mb2-hf-Bfc" id="Qtc-FP-GDb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -83,7 +90,9 @@
                             <outlet property="delegate" destination="Zf9-u2-Yj0" id="AxC-ut-97R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ogT-ac-dDM"/>
+                    <navigationItem key="navigationItem" id="ogT-ac-dDM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="3on-k9-UwJ"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="21m-lW-dma" kind="show" identifier="showDetail" id="gU5-Sa-Jro"/>
                         <segue destination="kNm-Qq-caq" kind="show" identifier="showCreate" id="yes-a8-sz8"/>
