@@ -30,4 +30,14 @@ class TweetDetailViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func editButton(_ sender: Any) {
+    performSegue(withIdentifier: "showUpdate", sender: nil)
+  }
+    
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showUpdate" {
+      let controller = segue.destination as! TweetUpdateFormController
+      controller.tweet = tweet
+    }
+  }
 }

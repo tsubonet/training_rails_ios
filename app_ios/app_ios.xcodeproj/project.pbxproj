@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D0A99699B7A5FFA4D189571B /* Pods_app_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5B80B55FBA0BEDAF270B3A /* Pods_app_ios.framework */; };
+		E25D00671FC9145400113B9B /* TweetUpdateFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25D00661FC9145400113B9B /* TweetUpdateFormController.swift */; };
 		E2E0FAB11FC7D35F009CF1F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0FAB01FC7D35F009CF1F6 /* AppDelegate.swift */; };
 		E2E0FAB61FC7D35F009CF1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E0FAB41FC7D35F009CF1F6 /* Main.storyboard */; };
 		E2E0FAB81FC7D35F009CF1F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E0FAB71FC7D35F009CF1F6 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		4F3066B8304C07D17F123790 /* Pods-app_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-app_ios/Pods-app_ios.release.xcconfig"; sourceTree = "<group>"; };
 		9B5B80B55FBA0BEDAF270B3A /* Pods_app_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6EA67BD9838C7673E0DBA6 /* Pods-app_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app_ios/Pods-app_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E25D00661FC9145400113B9B /* TweetUpdateFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetUpdateFormController.swift; sourceTree = "<group>"; };
 		E2E0FAAD1FC7D35F009CF1F6 /* app_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E0FAB01FC7D35F009CF1F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E0FAB51FC7D35F009CF1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				E2EA49E31FC7EE2700919BCB /* TweetDetailViewController.swift */,
 				E2E0FAB01FC7D35F009CF1F6 /* AppDelegate.swift */,
 				E2E0FAB41FC7D35F009CF1F6 /* Main.storyboard */,
+				E25D00661FC9145400113B9B /* TweetUpdateFormController.swift */,
 				E2E0FAB71FC7D35F009CF1F6 /* Assets.xcassets */,
 				E2E0FAB91FC7D35F009CF1F6 /* LaunchScreen.storyboard */,
 				E2E0FABC1FC7D35F009CF1F6 /* Info.plist */,
@@ -228,6 +231,7 @@
 			files = (
 				E2E0FAB11FC7D35F009CF1F6 /* AppDelegate.swift in Sources */,
 				E2EA49E41FC7EE2700919BCB /* TweetDetailViewController.swift in Sources */,
+				E25D00671FC9145400113B9B /* TweetUpdateFormController.swift in Sources */,
 				E2E0FAC51FC7D8CA009CF1F6 /* tweet.swift in Sources */,
 				E2E0FAC31FC7D420009CF1F6 /* TweetsViewController.swift in Sources */,
 				E2EA49E61FC7F67000919BCB /* TweetCreateFormController.swift in Sources */,

@@ -128,15 +128,80 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="f6P-rg-Tko"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3ln-jS-lkE"/>
+                    <navigationItem key="navigationItem" id="pxU-Yf-J6K">
+                        <barButtonItem key="backBarButtonItem" title=" " id="NdW-ok-CB8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="f9f-Ie-rBH">
+                            <connections>
+                                <action selector="editButton:" destination="21m-lW-dma" id="jnc-VZ-ecp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bodyTextLabel" destination="o5X-qP-7ER" id="daV-BI-wgO"/>
                         <outlet property="titleTextLabel" destination="3D2-5a-5NJ" id="BTE-vo-GdX"/>
+                        <segue destination="P6S-fG-Z05" kind="show" identifier="showUpdate" id="ZZe-p1-XRu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrD-aL-FHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.60000000000002" y="89.505247376311857"/>
+        </scene>
+        <!--Tweet Update Form Controller-->
+        <scene sceneID="iAF-79-YIS">
+            <objects>
+                <viewController id="P6S-fG-Z05" customClass="TweetUpdateFormController" customModule="app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVw-R5-K8o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JM6-tf-gh4">
+                                <rect key="frame" x="43" y="128" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrw-zc-Y4U">
+                                <rect key="frame" x="43" y="213" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tG-NU-HAu">
+                                <rect key="frame" x="116" y="128" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kXh-vd-7rX">
+                                <rect key="frame" x="116" y="208" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOM-GR-buK">
+                                <rect key="frame" x="139" y="309" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="変更"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="P6S-fG-Z05" eventType="touchUpInside" id="Jgo-S6-17c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rDp-XD-awH"/>
+                    </view>
+                    <connections>
+                        <outlet property="bodyText" destination="kXh-vd-7rX" id="TMR-oh-vJa"/>
+                        <outlet property="titleText" destination="2tG-NU-HAu" id="KuQ-z2-j27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AX7-Fj-9dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="88.605697151424295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iVk-MB-XcT">

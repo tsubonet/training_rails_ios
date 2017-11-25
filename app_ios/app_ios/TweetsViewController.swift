@@ -50,6 +50,18 @@ class TweetsViewController: UITableViewController {
     return cell
   }
   
+  
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      // Delete the row from the data source
+        
+      // 後でサーバのtweetを削除する処理を書きます
+      self.tweets.remove(at: indexPath.row)
+      tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+  }
+    
+  
   override func tableView(_ table: UITableView, didSelectRowAt indexPath: IndexPath) {
       performSegue(withIdentifier: "showDetail", sender: nil)
   }

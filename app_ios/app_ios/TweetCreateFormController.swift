@@ -13,6 +13,8 @@ class TweetCreateFormController: UIViewController {
   @IBOutlet weak var bodyText: UITextField!
     
   @IBAction func createButton(_ sender: UIButton) {
+    print(titleText.text!)
+    print(bodyText.text!)
     navigationController?.popToRootViewController(animated: true)
   }
     
