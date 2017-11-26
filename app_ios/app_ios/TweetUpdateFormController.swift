@@ -26,6 +26,19 @@ class TweetUpdateFormController: UIViewController {
   }
     
   @IBAction func updateButton(_ sender: Any) {
+    
+    tweet?.title = titleText.text
+    tweet?.body = bodyText.text
+    
+    tweet?.updateTweet(
+        success: {
+          print("success update")
+      },
+        failure: {error in
+          print("fail update")
+      }
+    )
+    // 一つ前のViewControllerに戻る
     //navigationController?.popViewController(animated: true)
     navigationController?.popToRootViewController(animated: true)
   }

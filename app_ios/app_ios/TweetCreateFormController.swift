@@ -15,6 +15,15 @@ class TweetCreateFormController: UIViewController {
   @IBAction func createButton(_ sender: UIButton) {
     print(titleText.text!)
     print(bodyText.text!)
+    let tweet = Tweet(title: titleText.text!, body: bodyText.text!)
+    tweet.createTweet(
+      success: {
+        print("success create")
+      },
+      failure: {(error) in
+        print("fail create")
+      }
+    )
     navigationController?.popToRootViewController(animated: true)
   }
     

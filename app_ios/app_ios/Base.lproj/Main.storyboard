@@ -94,6 +94,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="3on-k9-UwJ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="nQ7-IW-5SQ" id="uir-k1-1iM"/>
                         <segue destination="21m-lW-dma" kind="show" identifier="showDetail" id="gU5-Sa-Jro"/>
                         <segue destination="kNm-Qq-caq" kind="show" identifier="showCreate" id="yes-a8-sz8"/>
                     </connections>
